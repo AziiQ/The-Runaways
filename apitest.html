@@ -30,7 +30,9 @@
         gapi.client.setApiKey("AIzaSyAM0yPRxm2z4np7lH4gdhwMwwN-nWLx71Y");
         return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest")
             .then(function() { console.log("GAPI client loaded for API"); },
-                  function(err) { console.error("Error loading GAPI client for API", err); });
+            .then(function() { console.log("GAPI client loaded for API"); },
+                  function(err) { console.error("Error loading GAPI client for API", err); }),
+                  alert("completed");
       }
       // Make sure the client is loaded and sign-in is complete before calling this method.
       function execute() {
