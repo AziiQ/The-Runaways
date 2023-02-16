@@ -7,8 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://apis.google.com/js/api.js"></script>
-    <script src="assets/js/jquery-3.6.3.js"></script>
-    <script src="assets/js/googleapi.js"></script>
     
 </head>
 
@@ -24,7 +22,7 @@
     
       function authenticate() {
         return gapi.auth2.getAuthInstance()
-            .signIn({scope: "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar.events.readonly https://www.googleapis.com/auth/calendar.readonly"})
+            .signIn({scope: "https://www.googleapis.com/auth/calendar.events.readonly https://www.googleapis.com/auth/calendar.readonly"})
             .then(function() { console.log("Sign-in successful"); },
                   function(err) { console.error("Error signing in", err); });
       }
@@ -41,7 +39,7 @@
         })
             .then(function(response) {
                     // Handle the results here (response.result has the parsed body).
-                  console.log("Response", response.result);
+                    console.log("Response", response.result);
                   },
                   function(err) { console.error("Execute error", err); });
       }
