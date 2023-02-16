@@ -30,7 +30,7 @@
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "d54d459670e39a9f2ef7d90ae2fbdefffe87e7498a80433ffc9c03339bc31ca1@group.calendar.google.com"});
+    gapi.auth2.init({client_id: "454578463403-tk7bjjdd3jdamppku7ki0roq1u2buemj.apps.googleusercontent.com"});
   });
 
 
